@@ -1,0 +1,68 @@
+.product-filter {
+
+    .accordion {
+        --gk-accordion-btn-focus-border-color: unset !important;
+        --gk-accordion-btn-focus-box-shadow: unset !important;
+        &-button {
+            &:focus {
+                border: none !important;
+            }
+        }
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            input[type="checkbox"] {
+                    background: $primary-color;
+                }
+            span {
+                color: $text-gray;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.product-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-filter {
+        background-color: #fff;
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.3);
+        h3 {
+            padding: 10px 20px;
+            font-weight: 500;
+            border-bottom: 1px solid $secondary-color;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li label {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                span {
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

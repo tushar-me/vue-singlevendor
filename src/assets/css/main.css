@@ -1,0 +1,38 @@
+@import url("theme.min.css");
+@import url("simplebar.min.css");
+@import url("@/assets/fonts/feather/feather.css");
+@import url("bootstrap-icon/bootstrap-icons.min.css");
+@import url("@/assets/scss/app.scss");
+
+.img-text__container img{
+  max-width: 100% !important;
+}
+
+
+.image-slider-scroll,
+.checkout__product-items{
+  scroll-behavior: smooth;
+}
+.image-slider-scroll::-webkit-scrollbar,
+.checkout__product-items::-webkit-scrollbar {
+  width: 5px;
+  border-radius:20px;
+}
+
+/* Track */
+.image-slider-scroll::-webkit-scrollbar-track,
+.checkout__product-items::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+.image-slider-scroll::-webkit-scrollbar-thumb,
+.checkout__product-items::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.image-slider-scroll::-webkit-scrollbar-thumb:hover,
+.checkout__product-items::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

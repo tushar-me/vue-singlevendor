@@ -1,0 +1,204 @@
+
+.top_nav {
+    &-link {
+        color: #fff;
+        @media #{$small_mobile} {
+            font-size: 11px !important;
+        }
+    }
+}
+.navbar-desktop {
+    background-color: #fff;
+}
+nav {
+    .navbar-brand {
+        img {
+           width: 170px;
+            height: auto;
+            @media #{$small_mobile} {
+                width: 160px;
+            }
+        }
+    }
+    .search {
+        display: flex;
+        align-items: center;
+
+        border-radius: 5px;
+        gap: 10px;
+        input {
+            width: 460px;
+            padding: 10px;
+            box-shadow: rgba(255, 0, 0, 0.2) 0px 8px 24px;
+            border: 1px solid $secondary-color;
+            &::placeholder {
+                color: $secondary-color;
+            }
+            @media #{$lg_device} {
+                width: 270px;
+            }
+        }
+        button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 20px !important;
+            padding: 8px 10px;
+            border-radius: 8px;
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+    .login {
+        font-size: 22px;
+        font-weight: 500;
+        color: #000;
+        transition: all ease-in-out 0.3s;
+        color: $primary-color;
+        i {
+            font-size: 24px;
+        }
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    .cart,.wish {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        line-height: 0;
+        font-size: 16px;
+        font-weight: 500;
+        
+        transition: all ease-in-out 0.3s;
+        position: relative;
+        
+        p {
+            color: $primary-color;
+        }
+        i {
+            font-size: 28px;
+            color: $primary-color;
+        }
+    
+        &:hover {
+            color: $secondary-color;
+            p, i{
+                color: $secondary-color;
+            }
+
+        }
+        span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 999px;
+            top: -10px;
+            left: -10px;
+        }
+    }
+    //.navbar-nav {
+    //    .nav{
+    //        &-link {
+    //            color: $text-dark;
+    //            font-size: 18px;
+    //
+    //            &:hover {
+    //                color: $primary-color !important;
+    //            }
+    //        }
+    //        &-item {
+    //            .nav-link{
+    //                &:hover {
+    //                    color: $primary-color !important;
+    //                }
+    //            }
+    //        }
+    //    }
+    //    .dropdown-item:hover {
+    //        color: $primary-color !important;
+    //    }
+    //}
+}
+.category-link {
+    padding: 8px 15px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+
+
+
+
+.mobile-navbar {
+    .navbar-brand {
+        img {
+            width: 150px;
+            height: auto;
+        }
+    }
+    .nav-link {
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: #000;
+            stroke: #000;
+
+            path {
+                fill: #000;
+                stroke: #000;
+            }
+        }
+        &:hover {
+            color: #000 !important;
+
+        }
+    }
+    .dropdown-item {
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: #000;
+            stroke: #000;
+
+            path {
+                fill: #000;
+                stroke: #000;
+            }
+        }
+        &:hover {
+            color: #000 !important;
+
+        }
+    }
+}
+
+.navbar-fixed {
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 999 !important;
+}
+
+
+// Mobile Nav
+
+.navbar .navbar-toggler {
+    border: none !important;
+    padding: 0 !important;
+}
+.navbar {
+    --gk-navbar-toggler-icon-bg:url('');
+}
+

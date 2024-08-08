@@ -1,0 +1,108 @@
+.product-cart {
+
+    &__head {
+            p {
+                color: $text-gray;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            h3 {
+                color: #000;
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+    &__items {
+        padding: 20px 0;
+        &-item {
+            position: relative;
+            display: flex;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            padding: 20px 30px 20px 20px;
+            box-shadow: 0 1px 4px #8080801c;
+            border: 1px solid rgba(128, 128, 128, .16);
+            @media #{$small_mobile} {
+                padding: 10px;
+            }
+            
+            .left {
+                img {
+                    width: 200px;
+                    height: auto;
+                    @media #{$small_mobile} {
+                        width: 70px;
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                @media #{$small_mobile} {
+                    flex-direction: column;
+                }
+                .product-title {
+                    color: #000;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                    transition: all ease-in-out 0.3s;
+
+                    @media #{$small_mobile} {
+                        font-size: 14px !important;
+                        font-weight: 400 !important;
+                    }
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        @media #{$small_mobile} {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                strong {
+                    color: #000;
+                    @media #{$small_mobile} {
+                        font-size: 14px;
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    @media #{$small_mobile} {
+                        font-size: 14px;
+                    }
+                }
+                .cancel-button {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #f2f2f2;
+                    border-radius: 999px;
+                    transition: all ease-in-out 0.3s;
+                    @media #{$small_mobile} {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                    }
+                    i {
+                        color: #000;
+                        transition: all ease-in-out 0.3s;
+                    }
+                    &:hover {
+                        background: $primary-color;
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
