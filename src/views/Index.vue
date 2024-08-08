@@ -132,6 +132,7 @@
     import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
     import CatNav from "@/components/CatNav.vue";
 
+
     const modules = [Autoplay, Pagination, Navigation, EffectFade];
 
     const links = demoLinks;
@@ -140,25 +141,41 @@
     const categories = ref(null);
     const homeProducts = ref(null);
 
-    onMounted(async () => {
-      const res = await sendRequest({
-          method: 'get',
-          url: '/api/product-with-variations',
-      });
-
-      const getCats = await sendRequest({
+    
+    const getNavCats = async() => {
+      const response  = await sendRequest({
         method: 'get',
         url: '/api/navbar-categories',
-      });
+      })
+      if(response){
+        categories.value = getCats?.data
+      }
+    }
 
-      const homeCats = await sendRequest({
+    const getHomeCats = async() => {
+      const response  = await sendRequest({
         method: 'get',
         url: '/api/home-categories',
       });
 
-      console.log(homeCats)
-      homeProducts.value = homeCats?.data
-      categories.value = getCats?.data
-      data.value = res?.data
-    })
+      if(response){
+        homeProducts.value = homeCats?.data
+      }
+    }
+
+    const getProducts = async () => {
+      const response = await sendRequest({
+        method: 'get',
+        url: '/api/product-with-variations',
+      });
+      if(response) {
+        data.value = response?.data
+      }
+    }
+
+    onMounted(async () => {
+      await getNavCats();
+      await getHomeCats();
+      await getProducts();
+    });
 </script>
