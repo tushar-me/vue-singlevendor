@@ -148,7 +148,7 @@
         url: '/api/navbar-categories',
       })
       if(response){
-        categories.value = getCats?.data
+        categories.value = response?.data
       }
     }
 
@@ -175,7 +175,7 @@
 
     onMounted(async () => {
       await getNavCats();
-      await getHomeCats();
       await getProducts();
+      await getHomeCats();
     });
 </script>
